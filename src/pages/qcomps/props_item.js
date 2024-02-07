@@ -1,8 +1,27 @@
 function Item({ name, isPacked }) {
-  if (isPacked) {
-    return <li className="item">{name} ✔</li>;
-  }
-  return <li className="item"> {name} </li>
+  // if (isPacked) {
+  //   return (
+  //     <del>
+  //       <li className="item">{name} </li>
+  //     </del>
+  //   );
+  // }
+
+  //ternary
+  //let item = <li className="item"> {name} </li>
+  //return isPacked ? <del>{item}</del> : item 
+
+  // second ternary
+  <li className="item">
+    {isPacked ? (
+          name
+        ) : (
+          <del>
+            {name}
+          </del>
+        )}
+  </li>
+    
 }
 
 export default function PackingList() {

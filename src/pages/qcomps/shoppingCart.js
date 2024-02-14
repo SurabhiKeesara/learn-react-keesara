@@ -10,7 +10,7 @@ export default function RequestTracker() {
     setPending(p => p + 1);
     await delay(3000);
     setPending(p => p - 1);
-    setCompleted(completed + 1);
+    setCompleted(c => c + 1);
   }
 
   return (

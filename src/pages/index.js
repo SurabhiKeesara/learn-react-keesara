@@ -6,11 +6,12 @@ import Profile from './components/profile'
 import Counter from './components/snapshot'
 import Form from './components/snapshot2'
 import RequestTracker from './qcomps/shoppingCart'
+import Scoreboard from './qcomps/updObjectsForm'
 
 export default function Home() {
   return (
     <div className={styles.main}>
-        <RequestTracker />
+        <Scoreboard />
     </div>
   )
 }

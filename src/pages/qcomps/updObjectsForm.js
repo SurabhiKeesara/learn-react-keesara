@@ -1,27 +1,26 @@
 import { useState } from 'react';
 
 export default function Scoreboard() {
-  const [player, setPlayer] = useState({
+  let initialPlayer = {
     firstName: 'John Woodrow',
     lastName: 'Wilson',
     likescore: 10,
-  });
+  }
+  const [player, setPlayer] = useState(initialPlayer);
 
   function handlePlusClick() {
-    player.likescore++;
+    let newPlayer = {...player, likescore: player.likescore + 1}
+    setPlayer(newPlayer);
   }
 
   function handleFirstNameChange(e) {
-    setPlayer({
-      ...player,
-      firstName: e.target.value,
-    });
+    let newPlayer = {...player, firstName: e.target.value}
+    setPlayer(newPlayer);
   }
 
   function handleLastNameChange(e) {
-    setPlayer({
-      lastName: e.target.value
-    });
+    let newPlayer = {...player, lastName: e.target.value}
+    setPlayer(newPlayer);
   }
 
   return (
